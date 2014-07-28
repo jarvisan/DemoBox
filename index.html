@@ -2,13 +2,16 @@
 <html lang="en" ng-app="App">
 <head>
   <meta charset="UTF-8">
-  <title>test run</title>
+  <title>Uploader</title>
 </head>
 <body>
-  <input type="text" ng-model="name" ng>
-  <div my-upload name="{{name}}"></div>
+  <h2>Select a File to Upload</h2>
+  <h3>File For Upload</h3>
+  <input type="file" ng-model="selectedfile">
+  <h3>File Name</h3>
+  <input type="text" ng-model="filename">
+  <div my-upload filename="{{filename}}"></div>
 </body>
 <script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
-<script src="https://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
-<script src="./scripts/controllers/myUpload.js"></script>
+<script src="./scripts/myUpload.js"></script>
 </html>

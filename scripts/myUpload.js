@@ -1,12 +1,12 @@
-var app = angular.module('App', ['ngAnimate']);
+var app = angular.module('App', [ ]);
 app.directive("myUpload", function() {
   return {
     scope: {
-      name: '@'
+      filename: '@'
     },
     controller: function($scope, $element, $attrs, $transclude){
     },
     
-    template: '<ul> <li> <span ng-bind="name"></span> </li> </ul>'
+    template: '<ul> <li> <span ng-bind="filename"></span> </li> </ul>'
    };
 });
