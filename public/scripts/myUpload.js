@@ -5,10 +5,6 @@ app.directive("myUpload", function() {
       foldername: '@',
       files: '@'
     },
-    controller: function($scope, $element, $attrs, $transclude){
-      
-    },
-    
-    template: '<span ng-bind="foldername"></span> <span ng-bind="files"></span>'
+    templateUrl: '/preview.erb'
    };
 });
