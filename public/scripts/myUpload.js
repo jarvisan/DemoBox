@@ -2,7 +2,7 @@ var app = angular.module('App', [ 'ngAnimate' ]);
 app.directive("myUpload", function() {
   return {
     scope: {
-      foldername: '@',
+      filename: '@',
       files: '@'
     },
     templateUrl: '/preview.erb'
