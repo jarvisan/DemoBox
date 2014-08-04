@@ -2,12 +2,13 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './lib/test'
 
-set :database, {adapter: 'postgresql', database: 'test'}
+class App < Sinatra::Base
 
-get '/' do
-  erb :index
-end
+  get '/' do
+    erb :index
+  end
 
-get '/test' do
-  dbConnection
+  get '/test' do
+    dbConnection
+  end  
 end
