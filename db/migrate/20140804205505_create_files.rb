@@ -1,6 +1,6 @@
 class CreateFiles < ActiveRecord::Migration
   def change
-    create_table :files do |t|
+    create_table :userfiles do |t|
       t.string :name
       t.string :ex
 
