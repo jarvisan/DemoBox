@@ -11,6 +11,10 @@ class App < Sinatra::Base
     erb :index
   end
 
+  post '/upload' do
+    dbEntry(params[:name])
+  end
+
   get '/test' do
     dbConnection
     @userfiles = Userfile.all;;

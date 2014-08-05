@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140804205505) do
   enable_extension "plpgsql"
 
   create_table "userfiles", force: true do |t|
+    t.binary   "file"
     t.string   "name"
     t.string   "ex"
     t.decimal  "size"
