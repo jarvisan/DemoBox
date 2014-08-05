@@ -7,11 +7,21 @@
 <body>
   <h2>Select a File to Upload</h2>
   <h3>File For Upload(not yet implimented)</h3>
-  <input type="file" ng-model="files" multiple>
+
+  <form name="file_sub" ng-submit="myUpload()">
+    <input type="file" multiple>
+    <button class="button" type="submit">Submit</button>
+  </form>
+
   <h3>File Name(testing db connection)</h3>
-  <input type="text" ng-model="filename">
+
+  <form name="db_test" novalidate ng-submit="dbTest()">
+    <input type="text" ng-model="filename">
+    <button class="button" type="submit">Test</button>
+  </form>
 </body>
 <script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
 <script src="https://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
 <script src="/scripts/myUpload.js"></script>
+<script src="/scripts/conTest.js"></script>
 </html>
