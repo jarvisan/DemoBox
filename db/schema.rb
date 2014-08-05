@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140804205505) do
   create_table "userfiles", force: true do |t|
     t.string   "name"
     t.string   "ex"
+    t.decimal  "size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

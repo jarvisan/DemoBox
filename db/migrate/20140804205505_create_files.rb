@@ -3,6 +3,7 @@ class CreateFiles < ActiveRecord::Migration
     create_table :userfiles do |t|
       t.string :name
       t.string :ex
+      t.decimal :size
 
       t.timestamps
     end
