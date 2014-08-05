@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="App">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Uploader</title>
@@ -8,17 +8,18 @@
   <h2>Select a File to Upload</h2>
   <h3>File For Upload(not yet implimented)</h3>
 
-  <form name="file_sub" ng-submit="myUpload()">
-    <input type="file" multiple>
+  <form name="file_sub" action="/upload" method="post">
+    <input type="file" name="files" multiple>
     <button class="button" type="submit">Submit</button>
   </form>
 
-  <h3>File Name(testing db connection)</h3>
+  <h3>Manual Entry(testing db connection)</h3>
 
-  <form name="db_test" novalidate action="/upload" method="post">
-    <input type="text" name="name" ng-model="filename">
+  <form name="db_test" novalidate action="/test" method="post">
+    Name<input type="text" name="name">
+    Ex<input type="text" name="ex">
+    Size<input type="number" name="size">
     <button class="button" type="submit">Test</button>
   </form>
 </body>
-<script src="https://code.angularjs.org/1.2.9/angular.min.js"></script>
 </html>

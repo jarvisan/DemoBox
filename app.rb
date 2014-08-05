@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require './lib/uploader'
 require './lib/test'
 
 class Userfile < ActiveRecord::Base
@@ -11,13 +12,19 @@ class App < Sinatra::Base
     erb :index
   end
 
-  post '/upload' do
-    dbEntry(params[:name])
+  get '/list' do
+    erb :list
   end
 
-  get '/test' do
-    dbConnection
-    @userfiles = Userfile.all;;
+  post '/upload' do
+    dbUpload(params[:files])
+    @userfiles = Userfile.all
     @userfiles.to_json
-  end  
+  end
+
+  post '/test' do
+    dbEntry(params[:name], params[:ex], params[:size])
+    @userfiles = Userfile.all
+    @userfiles.to_json
+  end
 end
