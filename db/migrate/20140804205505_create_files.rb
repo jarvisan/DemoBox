@@ -4,7 +4,6 @@ class CreateFiles < ActiveRecord::Migration
       t.binary :file
       t.string :name
       t.string :ex
-      t.decimal :size
 
       t.timestamps
     end

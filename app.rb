@@ -27,7 +27,7 @@ class App < Sinatra::Base
   end
 
   post '/test' do
-    dbEntry(params[:name], params[:ex], params[:size])
+    dbEntry(params[:name], params[:ex])
     @userfiles = Userfile.all
     @userfiles.to_json
   end

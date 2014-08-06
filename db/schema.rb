@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20140804205505) do
     t.binary   "file"
     t.string   "name"
     t.string   "ex"
-    t.decimal  "size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
