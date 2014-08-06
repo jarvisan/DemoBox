@@ -12,11 +12,15 @@ class App < Sinatra::Base
     erb :index
   end
 
+  get '/upload' do
+      erb :upload
+  end
+
   get '/list' do
     erb :list
   end
 
-  post '/upload' do
+  post '/uploaded' do
     dbUpload(params[:files])
     @userfiles = Userfile.all
     @userfiles.to_json
